@@ -39,9 +39,9 @@ export class ClientError extends Error {
     this.request = request
 
     // this is needed as Safari doesn't support .captureStackTrace
-    if (typeof Error.captureStackTrace === 'function') {
-      Error.captureStackTrace(this, ClientError)
-    }
+    // if (typeof Error.captureStackTrace === 'function') {
+    // Error.captureStackTrace(this, ClientError)
+    // }
   }
 
   private static extractMessage(response: GraphQLResponse): string {
