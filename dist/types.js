@@ -26,11 +26,11 @@ var ClientError = /** @class */ (function (_super) {
         Object.setPrototypeOf(_this, ClientError.prototype);
         _this.response = response;
         _this.request = request;
-        // this is needed as Safari doesn't support .captureStackTrace
-        if (typeof Error.captureStackTrace === 'function') {
-            Error.captureStackTrace(_this, ClientError);
-        }
         return _this;
+        // this is needed as Safari doesn't support .captureStackTrace
+        // if (typeof Error.captureStackTrace === 'function') {
+        // Error.captureStackTrace(this, ClientError)
+        // }
     }
     ClientError.extractMessage = function (response) {
         try {
