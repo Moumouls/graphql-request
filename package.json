@@ -1,6 +1,6 @@
 {
   "name": "graphql-request",
-  "version": "0.0.0-dripip",
+  "version": "6.1.0.moumouls",
   "type": "module",
   "main": "./build/cjs/index.js",
   "exports": {
