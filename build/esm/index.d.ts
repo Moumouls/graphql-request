@@ -15,8 +15,8 @@ declare class GraphQLClient {
     /**
      * Send a GraphQL document to the server.
      */
-    request<T extends any, V extends Variables = Variables>(document: RequestDocument | TypedDocumentNode<T, V>, ...variablesAndRequestHeaders: VariablesAndRequestHeadersArgs<V>): Promise<T>;
-    request<T extends any, V extends Variables = Variables>(options: RequestOptions<V, T>): Promise<T>;
+    request<T = any, V extends Variables = Variables>(document: RequestDocument | TypedDocumentNode<T, V>, ...variablesAndRequestHeaders: VariablesAndRequestHeadersArgs<V>): Promise<T>;
+    request<T = any, V extends Variables = Variables>(options: RequestOptions<V, T>): Promise<T>;
     /**
      * Send GraphQL documents in batch to the server.
      */
